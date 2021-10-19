@@ -1,0 +1,59 @@
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <image src="/images/logo.png" class="png" mode="widthFix"></image>
+    <view class="text-xl">扫码录入
+      <text class="text-df">v1.0</text>
+    </view>
+    <view class="margin-top-sm">
+      <text>By:muruoxi</text>
+    </view>
+    <image src="/images/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+  </view>
+  <view class="padding flex text-center text-grey bg-white shadow-warp">
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-orange">{{isbn}}</view>
+      <view class="margin-top-sm">
+        刚才录入的ISBN编号
+      </view>
+    </view>
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <view class="content" bindtap="saoma">
+        <text class="cuIcon-scan text-grey"></text>
+        <text class="text-grey">扫码录入</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content cu-form-group">
+        <view class="title">标识符</view>
+        <input placeholder="用于区分不同的录入人员" value="{{biaoshi}}" bindinput="bindinput" />
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-timeline">
+    <view class="cu-item text-green">
+      <view class="bg-green content shadow">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-white text-green">录入成功</view>
+        </view>
+        <view class="margin-top-sm text-content">
+          <view>标题：{{title}}</view>
+          <view>作者：{{author}}</view>
+          <view>时间：{{year}}</view>
+          <view>出版社：{{press}}</view>
+          <view>页数：{{page}}</view>
+          <view>价格：{{money}}</view>
+          <view>装订：{{binding}}</view>
+          <view>ISBN:{{isbn}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view>
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+  <view class='gray-text'>{{tips}}</view>
+</view>
+
+</scroll-view>
