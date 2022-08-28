@@ -6,13 +6,13 @@
 
 return array(
     'db' => array(
-        'type' => 'pdo_sqlite',
+        'type' => 'pdo_mysql',
         'mysql' => array(
             'master' => array(
-                'host' => 'localhost',
-                'user' => 'root',
-                'password' => 'root',
-                'name' => 'fonts',
+                'host' => '',
+                'user' => '',
+                'password' => '',
+                'name' => '',
                 'tablepre' => 'mrx_',
                 'charset' => 'utf8',
                 'engine' => 'innodb',
@@ -21,10 +21,10 @@ return array(
         ),
         'pdo_mysql' => array(
             'master' => array(
-                'host' => 'localhost',
-                'user' => 'root',
-                'password' => 'root',
-                'name' => 'fonts',
+                'host' => '',
+                'user' => '',
+                'password' => '',
+                'name' => '',
                 'tablepre' => 'mrx_',
                 'charset' => 'utf8',
                 'engine' => 'innodb',
